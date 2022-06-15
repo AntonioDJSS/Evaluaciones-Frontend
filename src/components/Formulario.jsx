@@ -88,10 +88,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 01) </span>Es el tratado
-              internacional al cual se encuentra adherido México y que expresa
-              el compromiso nacional para contribuir a la reducción de Emisiones
-              de Gases de Efecto Invernadero a nivel mundial.
+              <span className="text-red-400 ">Pregunta 01) </span>Son órganos reguladores de las actividades 
+              del Sector Hidrocarburos al día de hoy:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -105,8 +103,8 @@ const [respuesta15, setRespuesta15] = useState('');
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta01(e.target.value)}
                   />
-                  <span className="uppercase font-bold">a)</span> Protocolo de
-                  Kioto sobre Cambio Climático.
+                  <span className="uppercase font-bold">a)</span> Secretaría de Hacienda y Crédito Público, Secretaría de
+                    Energía, Secretaría del Medio Ambiente y Recursos Naturales.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -117,8 +115,8 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">b)</span> Acuerdo de
-                  París.
+                  <span className="uppercase font-bold">b)</span> Secretaría de Energía, Petróleos Mexicanos, Comisión
+                    Nacional de Hidrocarburos.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -129,8 +127,9 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">c)</span> Convenio
-                  MARPOL – Anexo VI.
+                  <span className="uppercase font-bold">c)</span> Comisión Nacional de Hidrocarburos, Comisión
+                    Reguladora de Energía, Agencia Nacional de Seguridad,
+                    Energía y Ambiente.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -141,8 +140,8 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
-                  <span className="font-bold uppercase">d)</span> Iniciativa
-                  Global de Metano (GMI, por sus siglas en inglés).
+                  <span className="font-bold uppercase">d)</span> Secretaría de Energía, Comisión Nacional de
+                    Hidrocarburos, Comisión Reguladora de Energía.
                 </li>
               </ul>
             </div>
@@ -157,11 +156,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 02) </span>De acuerdo con
-              los Lineamientos para la prevención y el control integral de las
-              emisiones de metano del Sector Hidrocarburos (los Lineamientos de
-              Emisiones de Metano), se consideran instalaciones existentes las
-              que,…
+              <span className="text-red-400 ">Pregunta 02) </span>En la estructura institucional posterior a la Reforma Energética, son
+                considerados órganos diseñadores de políticas:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -176,10 +172,9 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Sin haber sido
-                  construidas, cuenten con un permiso otorgado por la SENER
-                  previo a la entrada en vigor de los Lineamientos de Emisiones
-                  de Metano.
+                  <span className="uppercase font-bold">a)</span> Secretaría de Hacienda y Crédito Público, Secretaría de
+                    Energía, Secretaría del Medio Ambiente y Recursos
+                    Naturales.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -190,9 +185,8 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">b)</span> Previo a la
-                  entrada en vigor de los Lineamientos de Emisiones de Metano
-                  hayan sido construidas.
+                  <span className="uppercase font-bold">b)</span> Secretaría de Energía, Petróleos Mexicanos, Comisión
+                    Nacional de Hidrocarburos.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -203,10 +197,9 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">c)</span> Sin haber sido
-                  construidas, cuenten con un permiso otorgado por la CNH previo
-                  a la entrada en vigor de los Lineamientos de Emisiones de
-                  Metano.
+                  <span className="uppercase font-bold">c)</span> Comisión Nacional de Hidrocarburos, Comisión
+                    Reguladora de Energía, Agencia Nacional de Seguridad,
+                    Energía y Ambiente.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -216,8 +209,8 @@ const [respuesta15, setRespuesta15] = useState('');
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta02(e.target.value)}
                   />
-                  <span className="font-bold uppercase">d)</span> Todas las
-                  anteriores.
+                  <span className="font-bold uppercase">d)</span> Secretaría de Energía, Comisión Nacional de
+                    Hidrocarburos, Comisión Reguladora de Energía.
                 </li>
               </ul>
             </div>
@@ -232,13 +225,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 03) </span>De acuerdo con
-              los Lineamientos de Emisiones de Metano, es la mejor práctica
-              operativa diseñada para identificar equipos, incluyendo sus
-              componentes, así como las operaciones en pozos en las que se
-              presenten o puedan presentarse fugas que deban ser reparadas en un
-              periodo determinado con objeto de reducir y controlar las
-              emisiones de metano.
+              <span className="text-red-400 ">Pregunta 03) </span>Indique cuales son los tres ejes principales de acción de la Agencia Nacional de Seguridad, Energía
+                y Ambiente, de acuerdo a lo establecido en la Ley de Hidrocarburos:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -247,50 +235,11 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta03"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta03(e.target.value)}
-
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    value={respuesta03}
+                    onChange={(e) => setRespuesta03(e.target.value)}
                   />
-                  <span className="uppercase font-bold">a)</span> Detección y
-                  Reparación de Fugas.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta03"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta03(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Desfogue.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta03"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta03(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Mantenimiento
-                  Correctivo.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta03"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta03(e.target.value)}
-
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Mantenimiento
-                  Preventivo.
                 </li>
               </ul>
             </div>
@@ -305,66 +254,21 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 04) </span>Son
-              metodologías aceptadas para la cuantificación de emisiones con
-              base en calculos de acuerdo con los Lineamientos de Emisiones de
-              Metano.
+              <span className="text-red-400 ">Pregunta 04) </span>Indique cinco atribuciones de la Comisión Nacional de Hidrocarburos, de acuerdo a lo establecido
+                en la Ley de Hidrocarburos:
             </h1>
           </div>
           <div className="flex justify-center">
             <div className="bg-white rounded-lg w-11/12">
               <ul className="divide-y divide-gray-300">
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
+                <input
                     name="pregunta04"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta04(e.target.value)}
-
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    value={respuesta04}
+                    onChange={(e) => setRespuesta04(e.target.value)}
                   />
-                  <span className="uppercase font-bold">a)</span> Balance de
-                  materia, modelos matemáticos y cálculos de ingeniería;
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta04"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta04(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Factores de
-                  emisión de los equipos, establecidos por el fabricante;
-                  Factores de emisión establecidos por el Grupo
-                  Intergubernamental de Expertos sobre el Cambio Climático
-                  (IPCC, por sus siglas en inglés) y Factores de emisión para el
-                  país o específicos para los equipos y/o Componentes.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta04"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta04(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Balance de
-                  materia, modelos matemáticos, factores de emisión
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta04"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta04(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Todos los
-                  anteriores.
                 </li>
               </ul>
             </div>
@@ -379,10 +283,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 05) </span>Emisión
-              deliberada y controlada de gases y vapores a la atmósfera, para
-              mantener la seguridad operativa en las actividades del Sector
-              Hidrocarburos.
+              <span className="text-red-400 ">Pregunta 05) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+                injerencia la Agencia Nacional de Seguridad, Energía y Ambiente:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -397,8 +299,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Detección y
-                  Reparación de Fugas.
+                  <span className="uppercase font-bold">a)</span> UPSTREAM, MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -409,7 +310,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">b)</span> Desfogue
+                  <span className="uppercase font-bold">b)</span> MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -420,19 +321,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">c)</span> Venteo de
-                  Hidrocarburos.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta05"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta05(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Fuga.
+                  <span className="uppercase font-bold">c)</span> Sólo UPSTREAM
                 </li>
               </ul>
             </div>
