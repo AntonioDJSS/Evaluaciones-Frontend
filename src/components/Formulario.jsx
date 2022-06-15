@@ -1,14 +1,37 @@
 import React from "react";
 import { useState } from "react";
 import Final from "./Final";
-
+//para crear el usaurio en la api
+import axios from "axios";
 function Formulario() {
   const [mostrarFinal, setMostrarFinal] = useState(false);
 
   const [botonActivo, setBotonActivo] = useState(false);
   const [boxSelected, setBoxSelected] = useState([]);
+//------------------------------------------------------
+const [respuesta01, setRespuesta01] = useState('');
+const [respuesta02, setRespuesta02] = useState('');
+const [respuesta03, setRespuesta03] = useState('');
+const [respuesta04, setRespuesta04] = useState('');
+const [respuesta05, setRespuesta05] = useState('');
+const [respuesta06, setRespuesta06] = useState('');
+const [respuesta07, setRespuesta07] = useState('');
+const [respuesta08, setRespuesta08] = useState('');
+const [respuesta09, setRespuesta09] = useState('');
+const [respuesta10, setRespuesta10] = useState('');
+const [respuesta11, setRespuesta11] = useState('');
+const [respuesta12, setRespuesta12] = useState('');
+const [respuesta13, setRespuesta13] = useState('');
+const [respuesta14, setRespuesta14] = useState('');
+const [respuesta15, setRespuesta15] = useState('');
 
-  const handleSubmit = (e) => {
+
+
+
+
+  console.log(respuesta14)
+  //
+  const handleSubmit = async(e) => {
     console.log(e.target.value);
     let aux = null;
 
@@ -25,8 +48,36 @@ function Formulario() {
     } else {
       setBotonActivo(false);
     }
+
+    //crear el usuario en la api
+    try {
+      const url = "http://localhost:4000/evaluaciones"
+      const respuesta = await axios.post(url,{
+        respuesta01,
+        respuesta02,
+        respuesta03,
+        respuesta04,
+        respuesta05,
+        respuesta06,
+        respuesta07,
+        respuesta08,
+        respuesta09,
+        respuesta10,
+        respuesta11,
+        respuesta12,
+        respuesta13,
+        respuesta14,
+        respuesta15
+      })
+      console.log(respuesta)
+    } catch (error) {
+      console.log(error)
+    }
   };
 
+
+
+  
   return (
     <div>
       <section className={`${mostrarFinal ? "hidden" : ""}`}>
@@ -49,9 +100,10 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta01"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta01(e.target.value)}
                   />
                   <span className="uppercase font-bold">a)</span> Protocolo de
                   Kioto sobre Cambio Climático.
@@ -59,9 +111,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta01"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta01(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Acuerdo de
                   París.
@@ -69,9 +123,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta01"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta01(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Convenio
                   MARPOL – Anexo VI.
@@ -79,9 +135,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta01"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta01(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Iniciativa
                   Global de Metano (GMI, por sus siglas en inglés).
@@ -112,9 +170,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta02"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta02(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Sin haber sido
                   construidas, cuenten con un permiso otorgado por la SENER
@@ -124,9 +184,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta02"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta02(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Previo a la
                   entrada en vigor de los Lineamientos de Emisiones de Metano
@@ -135,9 +197,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta02"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta02(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Sin haber sido
                   construidas, cuenten con un permiso otorgado por la CNH previo
@@ -147,9 +211,10 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta02"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta02(e.target.value)}
                   />
                   <span className="font-bold uppercase">d)</span> Todas las
                   anteriores.
@@ -182,9 +247,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta03"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta03(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Detección y
                   Reparación de Fugas.
@@ -192,18 +259,22 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta03"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta03(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Desfogue.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta03"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta03(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Mantenimiento
                   Correctivo.
@@ -211,9 +282,12 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta03"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta03(e.target.value)}
+
+
                   />
                   <span className="font-bold uppercase">d)</span> Mantenimiento
                   Preventivo.
@@ -243,9 +317,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta04"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta04(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Balance de
                   materia, modelos matemáticos y cálculos de ingeniería;
@@ -253,9 +329,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta04"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta04(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Factores de
                   emisión de los equipos, establecidos por el fabricante;
@@ -267,9 +345,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta04"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta04(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Balance de
                   materia, modelos matemáticos, factores de emisión
@@ -277,9 +357,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta04"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta04(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Todos los
                   anteriores.
@@ -309,9 +391,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta05"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta05(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Detección y
                   Reparación de Fugas.
@@ -319,18 +403,22 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta05"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta05(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Desfogue
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta05"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta05(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Venteo de
                   Hidrocarburos.
@@ -338,9 +426,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta05"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta05(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Fuga.
                 </li>
@@ -369,9 +459,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta06"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta06(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span>{" "}
                   Establecimiento de un Año base y un Programa de Detección y
@@ -380,9 +472,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta06"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta06(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span>{" "}
                   Identificación, Clasificación y Cuantificación de las
@@ -391,9 +485,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta06"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta06(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span>{" "}
                   Establecimiento de un Año base y el Planteamiento de Metas.
@@ -401,9 +497,10 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta06"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta06(e.target.value)}
                   />
                   <span className="font-bold uppercase">d)</span>{" "}
                   Identificación, Control y Reporte de las emisiones de metano.
@@ -432,9 +529,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta07"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta07(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Transparencia,
                   Relevancia, Consistencia y Cobertura.
@@ -442,9 +541,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta07"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta07(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Trazabilidad,
                   Cobertura, Oportunidad y Sustentabilidad.
@@ -452,9 +553,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta07"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta07(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Transparencia,
                   Cobertura, Consistencia y Sustentabilidad.
@@ -462,9 +565,10 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta07"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta07(e.target.value)}
                   />
                   <span className="font-bold uppercase">d)</span> Transparencia,
                   Cobertura, Oportunidad y Sustentabilidad.
@@ -495,9 +599,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta08"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta08(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Compresores,
                   Bombas Neumáticas, Sepradores y Tanques.
@@ -505,9 +611,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta08"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta08(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Equipos OGI,
                   Equipos de Medición y Sistemas de Recuperación de Vapores.
@@ -515,9 +623,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta08"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta08(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Equipos OGI,
                   Camaras Infrarrojas y Sistemas de Recuperación de Vapores.
@@ -525,9 +635,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta08"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta08(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Camaras
                   Infrarrojas, Deahidratadores y Controladores Neumáticos.
@@ -557,9 +669,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta09"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta09(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Producción de
                   gas asociado en pozos de petróleo; Pruebas de pozos de gas no
@@ -568,9 +682,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta09"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta09(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Pruebas de
                   pozos de petróleo de gas asociado; Pruebas de pozos de gas no
@@ -579,9 +695,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta09"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta09(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Pruebas de
                   pozos de petróleo de gas asociado; Producción de gas asociado
@@ -590,9 +708,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta09"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta09(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Todas las
                   anteriores.
@@ -621,9 +741,10 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta10"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta10(e.target.value)}
                   />
                   <span className="uppercase font-bold">a)</span> Siguiente paro
                   programado o 6 meses despues de detectada, lo que ocurra
@@ -632,9 +753,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta10"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta10(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Siguiente paro
                   programado o 15 meses después de detectada, lo que ocurra
@@ -643,9 +766,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta10"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta10(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Siguiente paro
                   programado o 12 meses después de detectada, lo que ocurra
@@ -654,10 +779,13 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta10"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                  />
+                    onChange={e =>setRespuesta10(e.target.value)}
+
+                  />                    
+
                   <span className="font-bold uppercase">d)</span> 15 días
                   naturales.
                 </li>
@@ -695,18 +823,22 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta11"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta11(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Cierto.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta11"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta11(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Falso.
                 </li>
@@ -737,18 +869,22 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta12"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta12(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Cierto.
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta12"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta12(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Falso.
                 </li>
@@ -759,7 +895,7 @@ function Formulario() {
         {/* PREGUNTA 12 */}
         {/* FINAL */}
 
-        {/* PREGUNTA 1 */}
+        {/* PREGUNTA 13 */}
         {/* INICIO */}
         <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
           <div className="flex justify-center pY-4 mb-10">
@@ -778,9 +914,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta13"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta13(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> El responsable
                   de mantenimiento.
@@ -788,9 +926,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta13"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta13(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> El responsable
                   técnico del PPCIEM.
@@ -798,9 +938,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta13"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta13(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Un equipo
                   multidisciplinario.
@@ -808,9 +950,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta13"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta13(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Un tercero
                   autorizado por la ASEA.
@@ -839,9 +983,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta14"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta14(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Trimestral, en
                   seguimiento del Programa de Detección y Reparación de Fugas.
@@ -849,9 +995,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta14"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta14(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Semestral, en
                   seguimiento del Programa de Detección y Reparación de Fugas.
@@ -859,18 +1007,22 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta14"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta14(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Anual
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta14"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta14(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Cada 5 años.
                 </li>
@@ -898,9 +1050,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta15"
-                    value="1"
+                    value="A"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta15(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">a)</span> Informe Anual
                   de Cumplimiento del PPCIEM.
@@ -908,9 +1062,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta15"
-                    value="2"
+                    value="B"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta15(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">b)</span> Informe del
                   Programa de Detección y Reparación de Fugas.
@@ -918,9 +1074,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta15"
-                    value="3"
+                    value="C"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta15(e.target.value)}
+
                   />
                   <span className="uppercase font-bold">c)</span> Informe de
                   Desempeño en materia de Seguridad Industrial, Seguridad
@@ -929,9 +1087,11 @@ function Formulario() {
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta15"
-                    value="4"
+                    value="D"
                     type="radio"
                     className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    onChange={e =>setRespuesta15(e.target.value)}
+
                   />
                   <span className="font-bold uppercase">d)</span> Ninguno de los
                   anteriores, el Reporte Anual de Cumplimiento del PPCIEM se
