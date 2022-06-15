@@ -1,11 +1,11 @@
 
 function Final() {
   return (
-    <div className="bg-green-800 mb-6 mx-7 pt-6 pb-1 shadow-md rounded-md">
-                  <div className="font-bold uppercase text-green-400 mb-5 text-2xl">
-                    ¡GENIAL! TU EVALUACION SE HA GUARDADO Y ENVIADO CORRECTAMENTE, <span className="text-green-300">Mantente al pendiente de las intrucciones de tu asesor</span>
-                  </div>
-                </div>
+                 <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-amber-100">
+                 <p className="block text-center my-5 text-amber-900">
+                 ¡Genial! Tu evaluacion se ha guardado y enviado correctamente, mantente al pendiente de las intrucciones de tu asesor
+                 </p>
+               </div>
   )
 }
 

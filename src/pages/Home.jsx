@@ -32,23 +32,23 @@ function Home() {
 
   return (
     <>
-        <section className="md:flex h-screen md:m-auto">
-        <section className="md:align-middle md:mx-96">
+        <section className="flex h-screen md:m-auto">
+        <section className="align-middle md:mx-60">
+        <Header />
             <div className={`${mostrarFormulario ? "hidden" : ""}`}>
             <div>
             <h1 className="uppercase text-rose-500 font-black text-5xl text-center">
-              Inicia Sesion y Comienza tu {""}
-              <span className="text-black">Evaluacion</span>
+            {" "}
+              <span className="text-black">Evaluación Final</span>
             </h1>
           </div>
             <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
             <p className="block text-center my-5 text-green-900">
-            ¡Te recomendamos corroborar que los campos de nombre completo y correo electronico se encuentren llenados correctamente, es importante no enviarlos
-            incompletos o con informacion erronea!
+            Normatividad de Perforación de Pozos
             </p>
           </div>
 
-              <form className="bg-white py-10 px-5 mb-10 lg:mb-0 shadow-lg rounded-md">
+{/*               <form className="bg-white py-10 px-5 mb-10 lg:mb-0 shadow-lg rounded-md">
                 <div className="my-5">
                 <label className="uppercase text-gray-600 block text-xl font-bold">
                   Nombre Completo
@@ -102,19 +102,13 @@ function Home() {
                   {mostrarFormulario ? false : "Iniciar Evaluación"}
                 </button>
                 </div>
-              </form>
+              </form> */}
             </div>
 
             {/*  FORMULARIO PREGUNTAS */}
             {/*  INICIO */}
-            <div
-              className={`${
-                mostrarFormulario ? "block" : "hidden"
-              } block md:w-1/2 lg:w-full`}
-            >
-              <Header />
-              <Formulario />
-            </div>
+                          <Formulario />
+
             {/*  FORMULARIO PREGUNTAS */}
             {/*  FINAL */}
 

@@ -3,31 +3,35 @@ import { useState } from "react";
 import Final from "./Final";
 //para crear el usaurio en la api
 import axios from "axios";
+import clienteAxios from "../config/axios";
 function Formulario() {
   const [mostrarFinal, setMostrarFinal] = useState(false);
 
   const [botonActivo, setBotonActivo] = useState(false);
   const [boxSelected, setBoxSelected] = useState([]);
-//------------------------------------------------------
-const [respuesta01, setRespuesta01] = useState('');
-const [respuesta02, setRespuesta02] = useState('');
-const [respuesta03, setRespuesta03] = useState('');
-const [respuesta04, setRespuesta04] = useState('');
-const [respuesta05, setRespuesta05] = useState('');
-const [respuesta06, setRespuesta06] = useState('');
-const [respuesta07, setRespuesta07] = useState('');
-const [respuesta08, setRespuesta08] = useState('');
-const [respuesta09, setRespuesta09] = useState('');
-const [respuesta10, setRespuesta10] = useState('');
-const [respuesta11, setRespuesta11] = useState('');
-const [respuesta12, setRespuesta12] = useState('');
-const [respuesta13, setRespuesta13] = useState('');
-const [respuesta14, setRespuesta14] = useState('');
-const [respuesta15, setRespuesta15] = useState('');
-
-
-
-
+  const [email, setEmail] = useState('');
+  const [nombre, setNombre] = useState('');
+  
+  const [respuesta01, setRespuesta01] = useState('');
+  const [respuesta02, setRespuesta02] = useState('');
+  const [respuesta03, setRespuesta03] = useState('');
+  const [respuesta04, setRespuesta04] = useState('');
+  const [respuesta05, setRespuesta05] = useState('');
+  const [respuesta06, setRespuesta06] = useState('');
+  const [respuesta07, setRespuesta07] = useState('');
+  const [respuesta08, setRespuesta08] = useState('');
+  const [respuesta09, setRespuesta09] = useState('');
+  const [respuesta10, setRespuesta10] = useState('');
+  const [respuesta11, setRespuesta11] = useState('');
+  const [respuesta12, setRespuesta12] = useState('');
+  const [respuesta13, setRespuesta13] = useState('');
+  const [respuesta14, setRespuesta14] = useState('');
+  const [respuesta15, setRespuesta15] = useState('');
+  const [respuesta16, setRespuesta16] = useState('');
+  const [respuesta17, setRespuesta17] = useState('');
+  const [respuesta18, setRespuesta18] = useState('');
+  const [respuesta19, setRespuesta19] = useState('');
+  const [respuesta20, setRespuesta20] = useState('');
 
   console.log(respuesta14)
   //
@@ -51,8 +55,9 @@ const [respuesta15, setRespuesta15] = useState('');
 
     //crear el usuario en la api
     try {
-      const url = "http://localhost:4000/evaluaciones"
-      const respuesta = await axios.post(url,{
+      const respuesta = await clienteAxios.post("/evaluaciones",{
+        nombre,
+        email,
         respuesta01,
         respuesta02,
         respuesta03,
@@ -67,7 +72,12 @@ const [respuesta15, setRespuesta15] = useState('');
         respuesta12,
         respuesta13,
         respuesta14,
-        respuesta15
+        respuesta15,
+        respuesta16,
+        respuesta17,
+        respuesta18,
+        respuesta19,
+        respuesta20
       })
       console.log(respuesta)
     } catch (error) {
@@ -81,7 +91,43 @@ const [respuesta15, setRespuesta15] = useState('');
   return (
     <div>
       <section className={`${mostrarFinal ? "hidden" : ""}`}>
-      <form className="bg-white py-10 px-5 mb-10 lg:mb-0 shadow-md rounded-md">
+      <form>
+         {/* Nombre */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="my-5">
+                <label className="uppercase text-gray-600 block text-xl font-bold">
+                  Nombre Completo
+                </label>
+                <input
+                  type="text"
+                  placeholder="Nombre completo del evaluado"
+                  className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
+                />
+              </div>
+
+              <div className="my-5">
+                <label className="uppercase text-gray-600 block text-xl font-bold">
+                  Correo Electronico
+                </label>
+                <input
+                  type="email"
+                  placeholder="Ingresa tu correo electronico"
+                  className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+          
+                <div className="flex justify-center">
+                </div>
+                </div>
+
+        {/* Correo*/}
+        {/* FINAL */}
+
         {/* PREGUNTA 1 */}
         {/* INICIO */}
         <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
@@ -153,7 +199,7 @@ const [respuesta15, setRespuesta15] = useState('');
         {/* PREGUNTA 2 */}
         {/* INICIO */}
         <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
-          <div className="flex justify-center pY-4 mb-10">
+          <div className="flex justify-center pY-0 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
               <span className="text-red-400 ">Pregunta 02) </span>En la estructura institucional posterior a la Reforma Energética, son
@@ -237,6 +283,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     name="pregunta03"
                     type="text"
                     className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    placeholder="Ingresa tu respuesta aquí"
                     value={respuesta03}
                     onChange={(e) => setRespuesta03(e.target.value)}
                   />
@@ -265,6 +312,7 @@ const [respuesta15, setRespuesta15] = useState('');
                 <input
                     name="pregunta04"
                     type="text"
+                    placeholder="Ingresa tu respuesta aquí"
                     className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                     value={respuesta04}
                     onChange={(e) => setRespuesta04(e.target.value)}
@@ -329,17 +377,14 @@ const [respuesta15, setRespuesta15] = useState('');
         </div>
         {/* PREGUNTA 5 */}
         {/* FINAL */}
-
-        {/* PREGUNTA 6 */}
+  {/* PREGUNTA 6 */}
         {/* INICIO */}
         <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 06) </span>Son etapas del
-              diagnóstico que se deben abarcar en la elaboración de un Programa
-              para la Prevención y Control Integral de Emisiones de Metano
-              (PPCIEM).
+              <span className="text-red-400 ">Pregunta 06) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+injerencia la Comisión Nacional de Hidrocarburos:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -355,8 +400,7 @@ const [respuesta15, setRespuesta15] = useState('');
 
                   />
                   <span className="uppercase font-bold">a)</span>{" "}
-                  Establecimiento de un Año base y un Programa de Detección y
-                  Reparación de Fugas.
+                  UPSTREAM, MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -368,8 +412,7 @@ const [respuesta15, setRespuesta15] = useState('');
 
                   />
                   <span className="uppercase font-bold">b)</span>{" "}
-                  Identificación, Clasificación y Cuantificación de las
-                  emisiones de metano.
+                  MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -381,19 +424,8 @@ const [respuesta15, setRespuesta15] = useState('');
 
                   />
                   <span className="uppercase font-bold">c)</span>{" "}
-                  Establecimiento de un Año base y el Planteamiento de Metas.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta06"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta06(e.target.value)}
-                  />
-                  <span className="font-bold uppercase">d)</span>{" "}
-                  Identificación, Control y Reporte de las emisiones de metano.
-                </li>
+                  Sólo UPSTREAM                
+                  </li>
               </ul>
             </div>
           </div>
@@ -407,9 +439,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 07) </span>Son principios
-              que se deben observar al realizar la cuantificación de las
-              emisiones de metano:
+              <span className="text-red-400 ">Pregunta 07) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+                injerencia la Comisión Reguladora de Energía:
             </h1>
           </div>
           <div className="flex justify-center">
@@ -424,8 +455,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Transparencia,
-                  Relevancia, Consistencia y Cobertura.
+                  <span className="uppercase font-bold">a)</span> UPSTREAM, MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -436,8 +466,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">b)</span> Trazabilidad,
-                  Cobertura, Oportunidad y Sustentabilidad.
+                  <span className="uppercase font-bold">b)</span> MIDSTREAM y DOWNSTREAM
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -448,19 +477,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">c)</span> Transparencia,
-                  Cobertura, Consistencia y Sustentabilidad.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta07"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta07(e.target.value)}
-                  />
-                  <span className="font-bold uppercase">d)</span> Transparencia,
-                  Cobertura, Oportunidad y Sustentabilidad.
+                  <span className="uppercase font-bold">c)</span> Sólo UPSTREAM
                 </li>
               </ul>
             </div>
@@ -475,11 +492,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 08) </span>En referencia
-              a los Lineamientos para la prevención y el control integral de las
-              emisiones de metano del Sector Hidrocarburos, son sistemas y
-              equipos considerados en el Título Tercero “De las Acciones de
-              Prevención y Control Integral de Emisiones”:
+              <span className="text-red-400 ">Pregunta 08) </span>La Agencia Nacional de Seguridad, Energía y Ambiente tiene injerencia
+              en la regulación de pozos?: 
             </h1>
           </div>
           <div className="flex justify-center">
@@ -494,8 +508,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta08(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Compresores,
-                  Bombas Neumáticas, Sepradores y Tanques.
+                  <span className="uppercase font-bold">a)</span>Sí
                 </li>
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
@@ -506,32 +519,7 @@ const [respuesta15, setRespuesta15] = useState('');
                     onChange={e =>setRespuesta08(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">b)</span> Equipos OGI,
-                  Equipos de Medición y Sistemas de Recuperación de Vapores.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta08"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta08(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Equipos OGI,
-                  Camaras Infrarrojas y Sistemas de Recuperación de Vapores.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta08"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta08(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Camaras
-                  Infrarrojas, Deahidratadores y Controladores Neumáticos.
+                  <span className="uppercase font-bold">b)</span> No
                 </li>
               </ul>
             </div>
@@ -542,14 +530,13 @@ const [respuesta15, setRespuesta15] = useState('');
 
         {/* PREGUNTA 9 */}
         {/* INICIO */}
+
         <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 09) </span>Son
-              actividades petroleras que no forman parte del Año base del
-              Programa para la Prevención y Control Integral de Emisiones de
-              Metano (PPCIEM)
+              <span className="text-red-400 ">Pregunta 09) </span>A quién corresponde la aplicación e interpretación de los Lineamientos de Exploración y Extracción
+                de Hidrocarburos?
             </h1>
           </div>
           <div className="flex justify-center">
@@ -558,53 +545,12 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta09"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta09(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">a)</span> Producción de
-                  gas asociado en pozos de petróleo; Pruebas de pozos de gas no
-                  asociado y Producción de gas no asociado en pozos.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta09"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta09(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Pruebas de
-                  pozos de petróleo de gas asociado; Pruebas de pozos de gas no
-                  asociado y Terminación de pozos de hidrocarburos.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta09"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta09(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Pruebas de
-                  pozos de petróleo de gas asociado; Producción de gas asociado
-                  en pozos de petróleo y Pruebas de pozos de gas no asociado.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta09"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta09(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Todas las
-                  anteriores.
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    placeholder="Ingresa tu respuesta aquí"
+                    value={respuesta09}
+                    onChange={(e) => setRespuesta09(e.target.value)}
+                  />                
                 </li>
               </ul>
             </div>
@@ -619,9 +565,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 10) </span>Es el plazo
-              máximo para llevar a cabo una reparación de una Fuga en Equipos
-              y/o Componentes críticos del proceso.
+              <span className="text-red-400 ">Pregunta 10) </span>Mencione al menos tres principios en materia de seguridad y protección al medio ambiente, que
+            deben de seguirse en la realización de actividades de Exploración y Extracción de Hidrocarburos
             </h1>
           </div>
           <div className="flex justify-center">
@@ -630,53 +575,12 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta10"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta10(e.target.value)}
-                  />
-                  <span className="uppercase font-bold">a)</span> Siguiente paro
-                  programado o 6 meses despues de detectada, lo que ocurra
-                  primero.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta10"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta10(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Siguiente paro
-                  programado o 15 meses después de detectada, lo que ocurra
-                  primero.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta10"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta10(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Siguiente paro
-                  programado o 12 meses después de detectada, lo que ocurra
-                  primero.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta10"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta10(e.target.value)}
-
-                  />                    
-
-                  <span className="font-bold uppercase">d)</span> 15 días
-                  naturales.
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    value={respuesta10}
+                    onChange={(e) => setRespuesta10(e.target.value)}
+                  />                
                 </li>
               </ul>
             </div>
@@ -691,19 +595,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 11) </span>Indique si la
-              siguiente aseveración es cierta o falsa:<br></br>
-              <br></br>
-              “Los Regulados que cuenten con Instalaciones nuevas de los
-              Proyectos deberán establecer las acciones tendientes a mantener el
-              volumen de emisiones establecido en el diagnóstico para sus
-              equipos, incluyendo sus Componentes, así como para las operaciones
-              en pozos.<br></br>
-              <br></br>
-              Los Regulados que incrementen las emisiones de metano
-              cuantificadas en el Año base, deberánestablecer e implementar
-              acciones de prevención y control en el año calendario subsecuente,
-              para reducirlas al nivel determinado en el diagnóstico”.
+              <span className="text-red-400 ">Pregunta 11) </span>IMencione al menos siete aspectos que considere Ud. deban formar parte del Análisis de Riesgos de
+              Proceso de un Proyecto<br></br>
             </h1>
           </div>
           <div className="flex justify-center">
@@ -712,24 +605,13 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta11"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta11(e.target.value)}
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    placeholder="Ingresa tu respuesta aquí"
+                    value={respuesta11}
+                    onChange={(e) => setRespuesta11(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Cierto.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta11"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta11(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Falso.
                 </li>
               </ul>
             </div>
@@ -744,12 +626,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 12) </span>Indique si la
-              siguiente aseveración es cierta o falsa: “Los Terceros Autorizados
-              por la ASEA, son las organizaciones independientes encargadas de
-              la Elboración, Dictaminación y Gestión del Programa para la
-              Prevención y Control Integral de Emisiones de Metano del Sector
-              Hidrocarburos (PPCIEM)”
+              <span className="text-red-400 ">Pregunta 12) </span>Explique brevemente tres técnicas / metodologías que se emplean el Sector Hidrocarburos para la
+              identificación de peligros
             </h1>
           </div>
           <div className="flex justify-center">
@@ -758,24 +636,13 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta12"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    value={respuesta12}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta12(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Cierto.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta12"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta12(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Falso.
                 </li>
               </ul>
             </div>
@@ -790,11 +657,8 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 13) </span>Los Regulados
-              deberán efectuar evaluaciones de la implementación del PPCIEM por
-              lo menos una vez al año, en las cuales se determinará el avance de
-              las metas y acciones contenidas en el mismo. ¿Quién
-              especificamente debe realizar dicha evaluación?
+              <span className="text-red-400 ">Pregunta 13) </span>Mencione cinco tramites que requieren ser gestionados ante ASEA previo a iniciar la Construcción de
+            un Pozo Exploratorio 
             </h1>
           </div>
           <div className="flex justify-center">
@@ -803,50 +667,13 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta13"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    value={respuesta13}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta13(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> El responsable
-                  de mantenimiento.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta13"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta13(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> El responsable
-                  técnico del PPCIEM.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta13"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta13(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Un equipo
-                  multidisciplinario.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta13"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta13(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Un tercero
-                  autorizado por la ASEA.
                 </li>
               </ul>
             </div>
@@ -861,9 +688,10 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 14) </span>Indique cual
-              es la periodicidad para elaborar el Reporte de Cumplimiento del
-              PPCIEM que se entrega a la ASEA:
+              <span className="text-red-400 ">Pregunta 14) </span>Mencione los dos trámites que requieren ser gestionados ante ASEA en materia de Sistemas de
+              Administración de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente; para
+              poder estar en condiciones de iniciar operaciones en un Proyecto de Exploracion y/o Extracción de
+              Hidrocarburos
             </h1>
           </div>
           <div className="flex justify-center">
@@ -872,48 +700,13 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta14"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    value={respuesta14}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta14(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Trimestral, en
-                  seguimiento del Programa de Detección y Reparación de Fugas.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta14"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta14(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Semestral, en
-                  seguimiento del Programa de Detección y Reparación de Fugas.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta14"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta14(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Anual
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta14"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta14(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Cada 5 años.
                 </li>
               </ul>
             </div>
@@ -928,9 +721,9 @@ const [respuesta15, setRespuesta15] = useState('');
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 15) </span>Es informe al
-              cual se anexa el Reporte Anual de Cumplimiento del PPCIEM para
-              entregarlo a la ASEA.
+              <span className="text-red-400 ">Pregunta 15) </span>¿Cuándo es obligatorio que un Regulado que pretende realizar operaciones de Exploración y
+Extracción de Hidrocarburos solicite autorización para implementar su Sistema de Administración en
+materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente?
             </h1>
           </div>
           <div className="flex justify-center">
@@ -939,52 +732,13 @@ const [respuesta15, setRespuesta15] = useState('');
                 <li className="p-4 hover:bg-gray-50 cursor-pointer">
                   <input
                     name="pregunta15"
-                    value="A"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    value={respuesta15}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta15(e.target.value)}
 
                   />
-                  <span className="uppercase font-bold">a)</span> Informe Anual
-                  de Cumplimiento del PPCIEM.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta15"
-                    value="B"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta15(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">b)</span> Informe del
-                  Programa de Detección y Reparación de Fugas.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta15"
-                    value="C"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta15(e.target.value)}
-
-                  />
-                  <span className="uppercase font-bold">c)</span> Informe de
-                  Desempeño en materia de Seguridad Industrial, Seguridad
-                  Operativa y Protección al medio ambiente.
-                </li>
-                <li className="p-4 hover:bg-gray-50 cursor-pointer">
-                  <input
-                    name="pregunta15"
-                    value="D"
-                    type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                    onChange={e =>setRespuesta15(e.target.value)}
-
-                  />
-                  <span className="font-bold uppercase">d)</span> Ninguno de los
-                  anteriores, el Reporte Anual de Cumplimiento del PPCIEM se
-                  presenta de forma independiente.
                 </li>
               </ul>
             </div>
@@ -992,39 +746,201 @@ const [respuesta15, setRespuesta15] = useState('');
         </div>
         {/* PREGUNTA 15 */}
         {/* FINAL */}
+
+        
+        {/* PREGUNTA 16 */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+          <div className="flex justify-center pY-4 mb-10">
+            <h1 className="text-gray-700 font-bold">
+              {" "}
+              <span className="text-red-400 ">Pregunta 16) </span>Para un Proyecto de Exploración de Hidrocarburos en Aguas Profundas, que contempla en su "fase
+              01" la perforación de dos Pozos Exploratorios y dos Pozos de Evaluación, ¿Qué pólizas de seguros se
+              requieren?
+            </h1>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg w-11/12">
+              <ul className="divide-y divide-gray-300">
+                <li className="p-4 hover:bg-gray-50 cursor-pointer">
+                  <input
+                    name="pregunta16"
+                    value={respuesta16}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    onChange={e =>setRespuesta16(e.target.value)}
+
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* PREGUNTA 16 */}
+        {/* FINAL */}
+
+        {/* PREGUNTA 17 */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+          <div className="flex justify-center pY-4 mb-10">
+            <h1 className="text-gray-700 font-bold">
+              {" "}
+              <span className="text-red-400 ">Pregunta 17) </span>Mencione tres obligaciones contractuales en materia de gestión de trámites para encontrarse en
+            condiciones de iniciar operaciones de perforación de pozos petroleros
+            </h1>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg w-11/12">
+              <ul className="divide-y divide-gray-300">
+                <li className="p-4 hover:bg-gray-50 cursor-pointer">
+                  <input
+                    name="pregunta17"
+                    value={respuesta17}
+                    type="text"
+                    placeholder="Ingresa tu respuesta aquí"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    onChange={e =>setRespuesta17(e.target.value)}
+
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* PREGUNTA 17 */}
+        {/* FINAL */}
+
+
+        {/* PREGUNTA 18 */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+          <div className="flex justify-center pY-4 mb-10">
+            <h1 className="text-gray-700 font-bold">
+              {" "}
+              <span className="text-red-400 ">Pregunta 18) </span>Mencione los tipos de Pozos que requieren Autorización emitida por la Comisión Nacional de
+              Hidrocarburos a fin de iniciar su perforación
+            </h1>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg w-11/12">
+              <ul className="divide-y divide-gray-300">
+                <li className="p-4 hover:bg-gray-50 cursor-pointer">
+                  <input
+                    name="pregunta18"
+                    value={respuesta18}
+                    placeholder="Ingresa tu respuesta aquí"
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    onChange={e =>setRespuesta18(e.target.value)}
+
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* PREGUNTA 18*/}
+        {/* FINAL */}
+
+
+      {/* PREGUNTA 19 */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+          <div className="flex justify-center pY-4 mb-10">
+            <h1 className="text-gray-700 font-bold">
+              {" "}
+              <span className="text-red-400 ">Pregunta 19) </span>De acuerdo a la Comisión Nacional de Hidrocarburos, ¿En qué momento inicia la perforación de un
+                Pozo Petrolero?
+            </h1>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg w-11/12">
+              <ul className="divide-y divide-gray-300">
+                <li className="p-4 hover:bg-gray-50 cursor-pointer">
+                  <input
+                    name="pregunta19"
+                    value={respuesta19}
+                    placeholder="Ingresa tu respuesta aquí"
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    onChange={e =>setRespuesta19(e.target.value)}
+
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* PREGUNTA 19*/}
+        {/* FINAL */}
+
+        {/* PREGUNTA 20 */}
+        {/* INICIO */}
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+          <div className="flex justify-center pY-4 mb-10">
+            <h1 className="text-gray-700 font-bold">
+              {" "}
+              <span className="text-red-400 ">Pregunta 20) </span>Indique, cual es el principal instrumento normativo que utiliza la Comisión Nacional de Hidrocarburos
+              para definir los montos de sanciones por incumplimientos a los Lineamientos de Perforación de Pozos
+              de esta Autoridad
+            </h1>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-lg w-11/12">
+              <ul className="divide-y divide-gray-300">
+                <li className="p-4 hover:bg-gray-50 cursor-pointer">
+                  <input
+                    name="pregunta20"
+                    value={respuesta20}
+                    placeholder="Ingresa tu respuesta aquí"
+                    type="text"
+                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    onChange={e =>setRespuesta20(e.target.value)}
+
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* PREGUNTA 20*/}
+        {/* FINAL */}
+       
       </form>
 
       <div className="bg-white my-10 py-10 px-5 shadow-md rounded-md">
-      <div className="bg-amber-200 mb-6 mx-2 pt-6 pb-1 shadow-md rounded-md">
-      <div className="font-extrabold uppercase text-amber-600 mb-5 text-xs">¡Te recomendamos de la manera mas atenta corroborar que el examen no se encuentre vacio o incompleto! {' '} <span className="text-rose-500 font font-extrabold text-xs" >
-          No selecciones esta opcion si no te encuentras completamente seguro.</span>
+      <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
+            <p className="block text-center my-5 text-green-900">
+            Te recomendamos corroborar que todos las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro.
+            </p>
           </div>
-        </div>
         <div className="flex justify-center">
           <div className="flex mb-5">
             <label className="flex items-center">
               <input
                 type="checkbox"
-                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 mt-6 cursor-pointer"
                 value="Habilitar"
                 onChange={handleSubmit}
               />
-              <div className="ml-2 uppercase">
+              <div className="block text-center mt-6 text-gray-500">
                 He concluido el cuestionario y deseo enviar mis respuestas{" "}
               </div>
             </label>
           </div>
         </div>
 
-
+        <div className="flex justify-center">
         <button
           type="submit"
-          className="bg-rose-500 text-white font-bold uppercase p-3 rounded-md mb-10 w-full lg:w-96"
+          className=" bg-rose-600 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-rose-700 md:w-auto md:px-24"
           onClick={() => setMostrarFinal(!mostrarFinal)}
           disabled={!botonActivo}
         >
           {mostrarFinal ? false : "ENVIAR EVALUACION"}
         </button>
+        </div>
       </div>
       </section>
       <div
