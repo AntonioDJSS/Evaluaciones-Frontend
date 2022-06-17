@@ -5,7 +5,7 @@
 body .fondo {
     height: 100%;
     background-repeat: no-repeat;
-    background: url(./assets/Wallpapper.png) no-repeat center center scroll;
+    background: url(assets/Logo.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
