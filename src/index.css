@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.logo { 
-    height: 50px;
-    width: 50px;
-    background-image: url(assets/Logo.png) no-repeat;
-}
-
 body .fondo {
     height: 100%;
     background-repeat: no-repeat;
