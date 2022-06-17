@@ -36,14 +36,14 @@ function Home() {
         <section className="align-middle lg:mx-60">
         <Header />
             <div className={`${mostrarFormulario ? "hidden" : ""}`}>
-            <div className="mt-2 mb-5 shadow-lg px-5 py-6 rounded-xl bg-rose-200">
+            <div className="mt-2 mb-5 shadow-lg px-5 py-6 rounded-xl bg-amber-100">
             <div>
-            <h1 className="uppercase text-rose-600 font-black text-5xl text-center">
+            <h1 className="uppercase text-amber-600 font-black text-5xl text-center">
             Evaluación{" "}
               <span className="text-black">Final</span>
             </h1>
           </div>
-            <p className="block text-center mt-4 text-rose-900">
+            <p className="block text-center mt-4 text-amber-900">
             Normatividad de Perforación de Pozos
             </p>
           </div>

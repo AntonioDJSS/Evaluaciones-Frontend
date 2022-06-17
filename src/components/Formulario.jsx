@@ -133,7 +133,7 @@ function Formulario() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 01) </span>Son órganos reguladores de las actividades 
+              <span className="text-amber-500 ">Pregunta 01) </span>Son órganos reguladores de las actividades 
               del Sector Hidrocarburos al día de hoy:
             </h1>
           </div>
@@ -201,7 +201,7 @@ function Formulario() {
           <div className="flex justify-center pY-0 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 02) </span>En la estructura institucional posterior a la Reforma Energética, son
+              <span className="text-amber-500 ">Pregunta 02) </span>En la estructura institucional posterior a la Reforma Energética, son
                 considerados órganos diseñadores de políticas:
             </h1>
           </div>
@@ -270,7 +270,7 @@ function Formulario() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 03) </span>Indique cuales son los tres ejes principales de acción de la Agencia Nacional de Seguridad, Energía
+              <span className="text-amber-500 ">Pregunta 03) </span>Indique cuales son los tres ejes principales de acción de la Agencia Nacional de Seguridad, Energía
                 y Ambiente, de acuerdo a lo establecido en la Ley de Hidrocarburos:
             </h1>
           </div>
@@ -300,7 +300,7 @@ function Formulario() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 04) </span>Indique cinco atribuciones de la Comisión Nacional de Hidrocarburos, de acuerdo a lo establecido
+              <span className="text-amber-500 ">Pregunta 04) </span>Indique cinco atribuciones de la Comisión Nacional de Hidrocarburos, de acuerdo a lo establecido
                 en la Ley de Hidrocarburos:
             </h1>
           </div>
@@ -330,7 +330,7 @@ function Formulario() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 05) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+              <span className="text-amber-500 ">Pregunta 05) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
                 injerencia la Agencia Nacional de Seguridad, Energía y Ambiente:
             </h1>
           </div>
@@ -382,7 +382,7 @@ function Formulario() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 06) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+              <span className="text-amber-500 ">Pregunta 06) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
 injerencia la Comisión Nacional de Hidrocarburos:
             </h1>
           </div>
@@ -438,7 +438,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 07) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
+              <span className="text-amber-500 ">Pregunta 07) </span>En la cadena de valor del Sector Hidrocarburos, en que etapas tiene
                 injerencia la Comisión Reguladora de Energía:
             </h1>
           </div>
@@ -491,7 +491,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 08) </span>La Agencia Nacional de Seguridad, Energía y Ambiente tiene injerencia
+              <span className="text-amber-500 ">Pregunta 08) </span>La Agencia Nacional de Seguridad, Energía y Ambiente tiene injerencia
               en la regulación de pozos?: 
             </h1>
           </div>
@@ -534,7 +534,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 09) </span>A quién corresponde la aplicación e interpretación de los Lineamientos de Exploración y Extracción
+              <span className="text-amber-500 ">Pregunta 09) </span>A quién corresponde la aplicación e interpretación de los Lineamientos de Exploración y Extracción
                 de Hidrocarburos?
             </h1>
           </div>
@@ -564,7 +564,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 10) </span>Mencione al menos tres principios en materia de seguridad y protección al medio ambiente, que
+              <span className="text-amber-500 ">Pregunta 10) </span>Mencione al menos tres principios en materia de seguridad y protección al medio ambiente, que
             deben de seguirse en la realización de actividades de Exploración y Extracción de Hidrocarburos
             </h1>
           </div>
@@ -594,7 +594,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 11) </span>IMencione al menos siete aspectos que considere Ud. deban formar parte del Análisis de Riesgos de
+              <span className="text-amber-500 ">Pregunta 11) </span>IMencione al menos siete aspectos que considere Ud. deban formar parte del Análisis de Riesgos de
               Proceso de un Proyecto<br></br>
             </h1>
           </div>
@@ -625,7 +625,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 12) </span>Explique brevemente tres técnicas / metodologías que se emplean el Sector Hidrocarburos para la
+              <span className="text-amber-500 ">Pregunta 12) </span>Explique brevemente tres técnicas / metodologías que se emplean el Sector Hidrocarburos para la
               identificación de peligros
             </h1>
           </div>
@@ -656,7 +656,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 13) </span>Mencione cinco tramites que requieren ser gestionados ante ASEA previo a iniciar la Construcción de
+              <span className="text-amber-500 ">Pregunta 13) </span>Mencione cinco tramites que requieren ser gestionados ante ASEA previo a iniciar la Construcción de
             un Pozo Exploratorio 
             </h1>
           </div>
@@ -687,7 +687,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 14) </span>Mencione los dos trámites que requieren ser gestionados ante ASEA en materia de Sistemas de
+              <span className="text-amber-500 ">Pregunta 14) </span>Mencione los dos trámites que requieren ser gestionados ante ASEA en materia de Sistemas de
               Administración de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente; para
               poder estar en condiciones de iniciar operaciones en un Proyecto de Exploracion y/o Extracción de
               Hidrocarburos
@@ -720,7 +720,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 15) </span>¿Cuándo es obligatorio que un Regulado que pretende realizar operaciones de Exploración y
+              <span className="text-amber-500 ">Pregunta 15) </span>¿Cuándo es obligatorio que un Regulado que pretende realizar operaciones de Exploración y
 Extracción de Hidrocarburos solicite autorización para implementar su Sistema de Administración en
 materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente?
             </h1>
@@ -753,7 +753,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 16) </span>Para un Proyecto de Exploración de Hidrocarburos en Aguas Profundas, que contempla en su "fase
+              <span className="text-amber-500 ">Pregunta 16) </span>Para un Proyecto de Exploración de Hidrocarburos en Aguas Profundas, que contempla en su "fase
               01" la perforación de dos Pozos Exploratorios y dos Pozos de Evaluación, ¿Qué pólizas de seguros se
               requieren?
             </h1>
@@ -785,7 +785,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 17) </span>Mencione tres obligaciones contractuales en materia de gestión de trámites para encontrarse en
+              <span className="text-amber-500 ">Pregunta 17) </span>Mencione tres obligaciones contractuales en materia de gestión de trámites para encontrarse en
             condiciones de iniciar operaciones de perforación de pozos petroleros
             </h1>
           </div>
@@ -817,7 +817,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 18) </span>Mencione los tipos de Pozos que requieren Autorización emitida por la Comisión Nacional de
+              <span className="text-amber-500 ">Pregunta 18) </span>Mencione los tipos de Pozos que requieren Autorización emitida por la Comisión Nacional de
               Hidrocarburos a fin de iniciar su perforación
             </h1>
           </div>
@@ -849,7 +849,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 19) </span>De acuerdo a la Comisión Nacional de Hidrocarburos, ¿En qué momento inicia la perforación de un
+              <span className="text-amber-500 ">Pregunta 19) </span>De acuerdo a la Comisión Nacional de Hidrocarburos, ¿En qué momento inicia la perforación de un
                 Pozo Petrolero?
             </h1>
           </div>
@@ -880,7 +880,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-red-400 ">Pregunta 20) </span>Indique, cual es el principal instrumento normativo que utiliza la Comisión Nacional de Hidrocarburos
+              <span className="text-amber-500 ">Pregunta 20) </span>Indique, cual es el principal instrumento normativo que utiliza la Comisión Nacional de Hidrocarburos
               para definir los montos de sanciones por incumplimientos a los Lineamientos de Perforación de Pozos
               de esta Autoridad
             </h1>
@@ -911,7 +911,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
       <div className="bg-white my-10 py-10 px-5 shadow-md rounded-2xl">
       <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
             <p className="block text-center my-5 text-green-900">
-            Te recomendamos corroborar que todos las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro.
+            Te recomendamos de la manera mas atenta el corroborar que todos las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro...  ¡No esta de más dar un otro vistazo!
             </p>
           </div>
         <div className="flex justify-center">
@@ -924,7 +924,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                 onChange={handleSubmit}
               />
               <div className="block text-center mt-6 text-gray-500">
-                He concluido el cuestionario y deseo enviar mis respuestas{" "}
+                He concluido el cuestionario y deseo enviar mis respuestas.{" "}
               </div>
             </label>
           </div>
@@ -933,11 +933,11 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
         <div className="flex justify-center">
         <button
           type="submit"
-          className=" bg-rose-600 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-rose-700 md:w-auto md:px-24"
+          className=" bg-amber-500 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-amber-600 md:w-auto md:px-24"
           onClick={() => setMostrarFinal(!mostrarFinal)}
           disabled={!botonActivo}
         >
-          {mostrarFinal ? false : "ENVIAR EVALUACION"}
+          {mostrarFinal ? false : "ENVIAR EVALUACIÓN"}
         </button>
         </div>
       </div>
