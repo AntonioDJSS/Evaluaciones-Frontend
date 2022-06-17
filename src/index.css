@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .logo { 
-    background-image: url(assets/Logo.png);
+    height: auto;
+    width: auto;
+    background-image: url(assets/Logo.png) no-repeat center;
+    background-size: 50px;
 }
 
 body .fondo {
