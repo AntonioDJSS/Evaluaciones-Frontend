@@ -911,7 +911,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
       <div className="bg-white my-10 py-10 px-5 shadow-md rounded-2xl">
       <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
             <p className="block text-center my-5 text-green-900">
-            Te recomendamos de la manera mas atenta el corroborar que todos las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro...  ¡No esta de más dar un otro vistazo!
+            Te recomendamos de la manera mas atenta el corroborar que todas las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro...  ¡No esta de más dar otro vistazo!
             </p>
           </div>
         <div className="flex justify-center">
