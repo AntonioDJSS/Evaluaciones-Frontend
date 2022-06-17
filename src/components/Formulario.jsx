@@ -9,9 +9,9 @@ function Formulario() {
 
   const [botonActivo, setBotonActivo] = useState(false);
   const [boxSelected, setBoxSelected] = useState([]);
+
   const [email, setEmail] = useState('');
   const [nombre, setNombre] = useState('');
-  
   const [respuesta01, setRespuesta01] = useState('');
   const [respuesta02, setRespuesta02] = useState('');
   const [respuesta03, setRespuesta03] = useState('');
@@ -33,7 +33,6 @@ function Formulario() {
   const [respuesta19, setRespuesta19] = useState('');
   const [respuesta20, setRespuesta20] = useState('');
 
-  console.log(respuesta14)
   //
   const handleSubmit = async(e) => {
     console.log(e.target.value);
@@ -94,7 +93,7 @@ function Formulario() {
       <form>
          {/* Nombre */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
         <div className="my-5">
                 <label className="uppercase text-gray-600 block text-xl font-bold">
                   Nombre Completo
@@ -130,7 +129,7 @@ function Formulario() {
 
         {/* PREGUNTA 1 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -198,7 +197,7 @@ function Formulario() {
 
         {/* PREGUNTA 2 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-0 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -267,7 +266,7 @@ function Formulario() {
 
         {/* PREGUNTA 3 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -282,7 +281,7 @@ function Formulario() {
                   <input
                     name="pregunta03"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     placeholder="Ingresa tu respuesta aquí"
                     value={respuesta03}
                     onChange={(e) => setRespuesta03(e.target.value)}
@@ -297,7 +296,7 @@ function Formulario() {
 
         {/* PREGUNTA 4 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -313,7 +312,7 @@ function Formulario() {
                     name="pregunta04"
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     value={respuesta04}
                     onChange={(e) => setRespuesta04(e.target.value)}
                   />
@@ -327,7 +326,7 @@ function Formulario() {
 
         {/* PREGUNTA 5 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -379,7 +378,7 @@ function Formulario() {
         {/* FINAL */}
   {/* PREGUNTA 6 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -435,7 +434,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 7 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -488,7 +487,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 8 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -531,7 +530,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
         {/* PREGUNTA 9 */}
         {/* INICIO */}
 
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -546,7 +545,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                   <input
                     name="pregunta09"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     placeholder="Ingresa tu respuesta aquí"
                     value={respuesta09}
                     onChange={(e) => setRespuesta09(e.target.value)}
@@ -561,7 +560,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 10 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -577,7 +576,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta10"
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     value={respuesta10}
                     onChange={(e) => setRespuesta10(e.target.value)}
                   />                
@@ -591,7 +590,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 11 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -606,7 +605,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                   <input
                     name="pregunta11"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     placeholder="Ingresa tu respuesta aquí"
                     value={respuesta11}
                     onChange={(e) => setRespuesta11(e.target.value)}
@@ -622,7 +621,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 12 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -639,7 +638,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     value={respuesta12}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta12(e.target.value)}
 
                   />
@@ -653,7 +652,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 13 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -670,7 +669,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     value={respuesta13}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta13(e.target.value)}
 
                   />
@@ -684,7 +683,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 14 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -703,7 +702,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     value={respuesta14}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta14(e.target.value)}
 
                   />
@@ -717,7 +716,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
 
         {/* PREGUNTA 15 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -735,7 +734,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta15}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta15(e.target.value)}
 
                   />
@@ -750,7 +749,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
         
         {/* PREGUNTA 16 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -768,7 +767,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta16}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta16(e.target.value)}
 
                   />
@@ -782,7 +781,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
 
         {/* PREGUNTA 17 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -799,7 +798,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta17}
                     type="text"
                     placeholder="Ingresa tu respuesta aquí"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta17(e.target.value)}
 
                   />
@@ -814,7 +813,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
 
         {/* PREGUNTA 18 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -831,7 +830,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta18}
                     placeholder="Ingresa tu respuesta aquí"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta18(e.target.value)}
 
                   />
@@ -846,7 +845,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
 
       {/* PREGUNTA 19 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -863,7 +862,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta19}
                     placeholder="Ingresa tu respuesta aquí"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta19(e.target.value)}
 
                   />
@@ -877,7 +876,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
 
         {/* PREGUNTA 20 */}
         {/* INICIO */}
-        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-md">
+        <div className="bg-white py-10 px-5 mb-10 shadow-md rounded-2xl">
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
@@ -895,7 +894,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
                     value={respuesta20}
                     placeholder="Ingresa tu respuesta aquí"
                     type="text"
-                    className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+                    className="border w-full p-3 bg-gray-50 rounded-xl"
                     onChange={e =>setRespuesta20(e.target.value)}
 
                   />
@@ -909,7 +908,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
        
       </form>
 
-      <div className="bg-white my-10 py-10 px-5 shadow-md rounded-md">
+      <div className="bg-white my-10 py-10 px-5 shadow-md rounded-2xl">
       <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
             <p className="block text-center my-5 text-green-900">
             Te recomendamos corroborar que todos las preguntas han sido contestadas, no selecciones el checkbox si no te encuentras completamente seguro.

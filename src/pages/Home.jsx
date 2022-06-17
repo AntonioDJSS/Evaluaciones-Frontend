@@ -32,18 +32,18 @@ function Home() {
 
   return (
     <>
-        <section className="flex h-screen md:m-auto">
-        <section className="align-middle md:mx-60">
+        <section className="flex h-screen m-auto">
+        <section className="align-middle lg:mx-60">
         <Header />
             <div className={`${mostrarFormulario ? "hidden" : ""}`}>
+            <div className="mt-2 mb-5 shadow-lg px-5 py-6 rounded-xl bg-rose-200">
             <div>
-            <h1 className="uppercase text-rose-500 font-black text-5xl text-center">
-            {" "}
-              <span className="text-black">Evaluación Final</span>
+            <h1 className="uppercase text-rose-600 font-black text-5xl text-center">
+            Evaluación{" "}
+              <span className="text-black">Final</span>
             </h1>
           </div>
-            <div className="mt-5 md:my-5 shadow-lg px-5 py-1 rounded-xl bg-green-100">
-            <p className="block text-center my-5 text-green-900">
+            <p className="block text-center mt-4 text-rose-900">
             Normatividad de Perforación de Pozos
             </p>
           </div>

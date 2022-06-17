@@ -4,8 +4,8 @@ const Header = () => {
 
 
   return (
-    <div className="flex justify-center">
-<img className="w-64 pb-16" src="https://i.imgur.com/BQY5ZTb.png"></img>
+    <div className="rotate flex justify-center">
+<img className="w-60 px-20 py-6" src="../src/assets/Logo.png"></img>
 </div>
   )
 }
