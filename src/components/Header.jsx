@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     <div className="rotate flex justify-center">
-<img className="w-60 px-20 py-6" src="../src/assets/Logo.png"></img>
+<img className="w-60 px-20 py-6 logo"></img>
 </div>
   )
 }
