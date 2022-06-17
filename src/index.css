@@ -5,7 +5,7 @@
 body .fondo {
     height: 100%;
     background-repeat: no-repeat;
-    background: url(assets/Wallpapper.png) no-repeat center center scroll;
+    background: url(assets/fondo01.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,9 +35,9 @@ body .fondo {
 .rotate:hover  
 {
 
-    transform: scale(1.2, 1.2) rotate(20deg);
-    -ms-transform: scale(1.2, 1.2) rotate(20deg);
-    -webkit-transform:scale(1.2, 1.2) rotate(20deg);
-    -o-transform: scale(1.2, 1.2) rotate(20deg);
+    transform: scale(1, 1) rotate(10deg);
+    -ms-transform: scale(1, 1) rotate(10deg);
+    -webkit-transform:scale(1, 1) rotate(10deg);
+    -o-transform: scale(1, 1) rotate(10deg);
 
 }
