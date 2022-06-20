@@ -145,7 +145,7 @@ function Formulario() {
                     name="pregunta01"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta01(e.target.value)}
                   />
                   <span className="uppercase font-bold">a)</span> Secretaría de Hacienda y Crédito Público, Secretaría de
@@ -156,7 +156,7 @@ function Formulario() {
                     name="pregunta01"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
@@ -168,7 +168,7 @@ function Formulario() {
                     name="pregunta01"
                     value="C"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
@@ -181,7 +181,7 @@ function Formulario() {
                     name="pregunta01"
                     value="D"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta01(e.target.value)}
 
                   />
@@ -213,7 +213,7 @@ function Formulario() {
                     name="pregunta02"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
@@ -226,7 +226,7 @@ function Formulario() {
                     name="pregunta02"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
@@ -238,7 +238,7 @@ function Formulario() {
                     name="pregunta02"
                     value="C"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta02(e.target.value)}
 
                   />
@@ -251,7 +251,7 @@ function Formulario() {
                     name="pregunta02"
                     value="D"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta02(e.target.value)}
                   />
                   <span className="font-bold uppercase">d)</span> Secretaría de Energía, Comisión Nacional de
@@ -342,7 +342,7 @@ function Formulario() {
                     name="pregunta05"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
@@ -353,7 +353,7 @@ function Formulario() {
                     name="pregunta05"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
@@ -364,7 +364,7 @@ function Formulario() {
                     name="pregunta05"
                     value="C"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta05(e.target.value)}
 
                   />
@@ -394,7 +394,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta06"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta06(e.target.value)}
 
                   />
@@ -406,7 +406,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta06"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta06(e.target.value)}
 
                   />
@@ -418,7 +418,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta06"
                     value="C"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta06(e.target.value)}
 
                   />
@@ -450,7 +450,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta07"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
@@ -461,7 +461,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta07"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
@@ -472,7 +472,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta07"
                     value="C"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta07(e.target.value)}
 
                   />
@@ -503,7 +503,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta08"
                     value="A"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta08(e.target.value)}
 
                   />
@@ -514,7 +514,7 @@ injerencia la Comisión Nacional de Hidrocarburos:
                     name="pregunta08"
                     value="B"
                     type="radio"
-                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                    className="appearance-none h-4 w-4 border border-gray-300 rounded-xl bg-gray-300 checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                     onChange={e =>setRespuesta08(e.target.value)}
 
                   />
@@ -919,7 +919,7 @@ materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambi
             <label className="flex items-center">
               <input
                 type="checkbox"
-                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-rose-300 checked:border-rose-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 mt-6 cursor-pointer"
+                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-amber-300 checked:border-amber-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 mt-6 cursor-pointer"
                 value="Habilitar"
                 onChange={handleSubmit}
               />
