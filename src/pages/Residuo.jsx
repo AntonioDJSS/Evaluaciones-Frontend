@@ -40,7 +40,7 @@ function Residuo() {
             <div>
             <h1 className="uppercase text-amber-600 font-black text-5xl text-center">
             Evaluación{" "}
-              <span className="text-black">Diagnostica</span>
+              <span className="text-black">FINAL</span>
             </h1>
           </div>
             <p className="block text-center mt-4 text-amber-900">
