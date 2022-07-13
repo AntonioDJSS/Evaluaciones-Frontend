@@ -1273,7 +1273,7 @@ function EncuestaSatisfaccion() {
           <div className="flex justify-center pY-4 mb-10">
             <h1 className="text-gray-700 font-bold">
               {" "}
-              <span className="text-amber-500 ">Pregunta 16) </span>  La pantalla se vio con claridad desde todos los puntos del aula
+              <span className="text-amber-500 ">Pregunta 16) </span>  En general que experiencia te llevas del curso
             </h1>
           </div>
           <div className="flex justify-center">
