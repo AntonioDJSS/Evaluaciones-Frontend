@@ -52,7 +52,7 @@ function EncuestaSatisfaccion() {
 
     //crear el usuario en la api
     try {
-      const respuesta = await clienteAxios.post("/encuestaSatisfaccion",{
+      const respuesta = await clienteAxios.post("/atmosferas",{
         nombre,
         email,
         respuesta01,
