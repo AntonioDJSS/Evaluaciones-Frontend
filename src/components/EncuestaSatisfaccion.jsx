@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import Final from "./Final";
 //para crear el usaurio en la api
-import axios from "axios";
 import clienteAxios from "../config/axios";
 function EncuestaSatisfaccion() {
   const [mostrarFinal, setMostrarFinal] = useState(false);
